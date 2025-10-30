@@ -1,0 +1,23 @@
+<div id="jailModal">
+  <div id="jailModalBody">
+    <button id="jailModalBtn" onclick="closeModal()">&times;</button>
+
+    <h3 id="modalJailName" style="margin-bottom:1rem;">
+      {{ translations.modal_jail }}
+    </h3>
+
+    <div class="jail-stats" style="margin-bottom:1rem;">
+      <span id="modalJailStatus"></span> •
+      <span id="modalBannedCount"></span> {{ translations.banned_count }} •
+      <span id="modalFailedCount"></span> {{ translations.failed_count }}
+    </div>
+    <h4 style="margin-bottom:0.5rem;">{{ translations.recent_logs }}</h4>
+    <pre id="modalLogs"></pre>
+    <div class="modal-actions" style="display:flex; gap:1rem; margin-bottom:1rem;">
+      <button class="btn btn-primary" id="toggleJailBtn">
+        <i data-lucide="power"></i>
+        {{ translations.toggle_jail }}
+      </button>
+    </div>
+  </div>
+</div>

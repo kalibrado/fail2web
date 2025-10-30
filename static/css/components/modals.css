@@ -1,0 +1,81 @@
+/* =====================================================
+   static/css/components/modals.css
+   Styles des modales
+===================================================== */
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--bg-modal);
+  justify-content: center;
+  align-items: center;
+  z-index: var(--z-modal);
+}
+
+.modal-content {
+  background: var(--bg-modal-content);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  width: 90%;
+  max-width: 500px;
+  color: var(--text-primary);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--spacing-md);
+  gap: var(--spacing-sm);
+}
+
+#jailModal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: var(--z-overlay);
+  transition: all var(--transition-normal);
+}
+
+#jailModalBody {
+  background: var(--bg-modal-content);
+  border-radius: var(--radius-xl);
+  max-width: 950px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: var(--spacing-sm);
+  position: relative;
+}
+
+#modalLogs {
+  background: rgba(0, 0, 0, 0.2);
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  max-height: 50vh;
+  text-align: left;
+  white-space: pre-wrap;
+  font-family: "Courier New", monospace;
+  font-size: 0.85rem;
+}
+
+#jailModalBtn {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+#jailModalBtn:hover {
+  transform: scale(1.2);
+}
+

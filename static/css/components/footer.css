@@ -1,0 +1,22 @@
+/* =====================================================
+   static/css/components/footer.css
+   Styles du footer
+===================================================== */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-xs);
+  font-size: 0.9rem;
+  color: #9ca3af;
+  border-top: 1px solid #1f2937;
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+

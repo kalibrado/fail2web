@@ -1,0 +1,19 @@
+<div class="stats-grid">
+  {% set stats = [
+    {'id': 'totalBanned', 'icon': 'ban', 'icon_bg': 'rgba(239, 68, 68, 0.2)', 'icon_color': '#ef4444', 'trend_icon': 'trending-up', 'trend_color': '#22c55e', 'label': translations.total_banned},
+    {'id': 'activeJails', 'icon': 'activity', 'icon_bg': 'rgba(251, 191, 36, 0.2)', 'icon_color': '#fbbf24', 'trend_icon': 'trending-up', 'trend_color': '#22c55e', 'label': translations.active_jails},
+    {'id': 'todayBans', 'icon': 'alert-triangle', 'icon_bg': 'rgba(59, 130, 246, 0.2)', 'icon_color': '#3b82f6', 'trend_icon': 'trending-down', 'trend_color': '#ef4444', 'label': translations.total_failed},
+    {'id': 'uptime', 'icon': 'clock', 'icon_bg': 'rgba(168, 85, 247, 0.2)', 'icon_color': '#a855f7', 'label': translations.uptime_service}
+  ] %}
+
+  {% for stat in stats %}
+    {% set id = stat.id %}
+    {% set icon = stat.icon %}
+    {% set icon_bg = stat.icon_bg %}
+    {% set icon_color = stat.icon_color %}
+    {% set trend_icon = stat.trend_icon if stat.trend_icon is defined else None %}
+    {% set trend_color = stat.trend_color if stat.trend_color is defined else None %}
+    {% set label = stat.label %}
+    {% include 'components/stat-card.html' %}
+  {% endfor %}
+</div>

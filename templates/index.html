@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% include 'components/stats-grid.html' %}
+  
+  <div class="main-content">
+    {% include 'components/jails-panel.html' %}
+    {% include 'components/banned-ips-panel.html' %}
+  </div>
+{% endblock %}

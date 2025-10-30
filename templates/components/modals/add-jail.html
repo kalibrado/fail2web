@@ -1,0 +1,31 @@
+<div id="addJailModal" class="modal">
+  <div class="modal-content">
+    <form id="addJailForm">
+      <label>{{ translations.jail_name }}</label>
+      <input type="text" id="jailName" required />
+
+      <label>{{ translations.filter }} (ex: sshd)</label>
+      <input type="text" id="jailFilter" placeholder="sshd" />
+
+      <label>{{ translations.port }} (ex: 22)</label>
+      <input type="text" id="jailPort" placeholder="22" />
+
+      <label>{{ translations.max_retry }}</label>
+      <input type="number" id="jailMaxRetry" value="5" />
+
+      <label>{{ translations.ban_time }}</label>
+      <input type="number" id="jailBanTime" value="600" />
+
+      <div class="modal-actions">
+        <button type="submit" class="btn btn-primary">
+          <i data-lucide="save"></i>
+          {{ translations.create_jail }}
+        </button>
+        <button type="button" class="btn" id="closeAddJail">
+          <i data-lucide="x"></i>
+          {{ translations.cancel }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

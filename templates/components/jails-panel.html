@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-header">
+    <h2 class="card-title">{{ translations.configured_jails }}</h2>
+    <div style="display: ruby;">
+      <button id="addJailBtn" class="btn btn-primary flex items-center gap-2">
+        <i data-lucide="plus-circle"></i>
+        <span>{{ translations.add_jail }}</span>
+      </button>
+      <button class="btn btn-primary" onclick="refreshData()" id="refreshBtn">
+        <i data-lucide="refresh-cw"></i>
+        {{ translations.refresh }}
+      </button>
+    </div>
+  </div>
+
+  <div class="jail-list" id="jailList">
+    <div class="empty-state">
+      <div class="loading" style="margin: 0 auto 1rem;"></div>
+      {{ translations.status_connecting }}
+    </div>
+  </div>
+</div>

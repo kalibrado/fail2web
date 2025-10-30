@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{{ translations.dashboard_title }}{% endblock %}</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+  {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+  <div class="container">
+    {% block header %}
+    {% include 'components/header.html' %}
+    {% endblock %}
+
+    {% block error_container %}
+    <div id="errorContainer"></div>
+    {% endblock %}
+
+    {% block content %}{% endblock %}
+
+    {% block footer %}
+    {% include 'components/footer.html' %}
+    {% endblock %}
+  </div>
+
+  {% block modals %}
+  {% include 'components/modals/jail-details.html' %}
+  {% include 'components/modals/add-jail.html' %}
+  {% endblock %}
+
+  <script>
+    const API_URL = "{{ url_for('api_root') }}";
+    const TRANSLATIONS = {{ translations | tojson | safe }};
+    const AUTO_REFRESH_INTERVAL = {{ refresh_interval | default (30000) }};
+  </script>
+
+  <script src="{{ url_for('static', filename='js/config.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/api.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/ui.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/stats.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jails.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/banned-ips.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/modal.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/data-manager.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/events.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+  {% block extra_js %}{% endblock %}
+</body>
+
+</html>

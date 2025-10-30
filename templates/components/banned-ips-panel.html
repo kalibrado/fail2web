@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-header">
+    <h2 class="card-title">{{ translations.banned_ips }}</h2>
+  </div>
+
+  <div class="search-box">
+    <i data-lucide="search" class="search-icon"></i>
+    <input type="text" placeholder="{{ translations.search_placeholder }}" id="searchIP">
+  </div>
+
+  <div id="banNewIPContainer" style="margin-top:0.5rem;"></div>
+
+  <div class="banned-ips" id="bannedIPs">
+    <div class="empty-state">
+      <div class="loading" style="margin: 0 auto 1rem;"></div>
+      {{ translations.status_connecting }}
+    </div>
+  </div>
+</div>

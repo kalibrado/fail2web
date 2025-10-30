@@ -1,0 +1,38 @@
+/* =====================================================
+   static/css/components/badges.css
+   Styles des badges
+===================================================== */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: rgba(34, 197, 94, 0.2);
+  border: 1px solid var(--border-success);
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  animation: pulse 2s infinite;
+}
+
+.badge.offline {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: var(--border-danger);
+}
+
+.jail-status {
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+}
+
+.status-active {
+  background: rgba(34, 197, 94, 0.2);
+  color: var(--color-success);
+}
+
+.status-inactive {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--color-danger);
+}
+

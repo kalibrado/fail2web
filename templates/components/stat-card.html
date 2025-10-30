@@ -1,0 +1,12 @@
+<div class="stat-card">
+  <div class="stat-header">
+    <div class="stat-icon" style="background: {{ icon_bg }};">
+      <i data-lucide="{{ icon }}" style="color: {{ icon_color }};"></i>
+    </div>
+    {% if trend_icon %}
+    <i data-lucide="{{ trend_icon }}" style="color: {{ trend_color }};"></i>
+    {% endif %}
+  </div>
+  <div class="stat-value" id="{{ id }}">-</div>
+  <div class="stat-label">{{ label }}</div>
+</div>
